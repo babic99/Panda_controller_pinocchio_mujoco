@@ -392,9 +392,8 @@ Kr_p = np.diag([1.0, 1.0, 1.0])
 Kr_d = np.diag([0.4, 0.4, 0.4])
 
 
-# Jacobian damping (kod pseudo inverznog jakobijana se pojavljuje ako lamda)
+# Jacobian damping 
 jac_damping = 1e-2
-
 
 
 # =========================
@@ -432,7 +431,7 @@ step_count = 0
 with viewer.launch_passive(model_mj, data_mj) as v:
     while v.is_running():
 
-        # koristi simulaciono vreme, ne wall-clock
+        # koristi simulaciono vreme
         t = data_mj.time
 
         # -----------------------------------
@@ -510,7 +509,7 @@ with viewer.launch_passive(model_mj, data_mj) as v:
         omega_d = axis_world * dtheta_t
         domega_d = axis_world * ddtheta_t
 
-        #spajam yeljenu poyiciju i orijentaciju u matricu homogene transformacije
+        #spajam zeljenu poyiciju i orijentaciju u matricu homogene transformacije
         T_d = np.eye(4)
         T_d[:3, :3] = R_d
         T_d[:3, 3] = x_d

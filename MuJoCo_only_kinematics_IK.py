@@ -522,7 +522,7 @@ with viewer.launch_passive(model_mj, data_mj) as v:
 
         # -----------------------------------
         # Direktno postavljanje q u MuJoCo
-        # BEZ dinamike, BEZ kontrolera
+        # Bez dinamike, bez kontrolera
         # -----------------------------------
         data_mj.qpos[:] = q_ref_full
         data_mj.qvel[:] = dq_ref_full

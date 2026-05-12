@@ -21,7 +21,7 @@ model_mj = mujoco.MjModel.from_xml_path(XML_PATH)
 data_mj = mujoco.MjData(model_mj)
 
 # =========================
-# 1b) Spoljašnja perturbaciona sila
+# 1b) Spoljašnja  sila
 # =========================
 FORCE_BODY_NAME = "hand"
 
@@ -758,8 +758,6 @@ with viewer.launch_passive(model_mj, data_mj) as v:
         draw_frame_axes_capsules(v, T_A, axis_length=0.08, axis_radius=0.0025)
         draw_frame_axes_capsules(v, T_B, axis_length=0.08, axis_radius=0.0025)
         draw_frame_axes_capsules(v, T_act, axis_length=0.10, axis_radius=0.0020)
-
-        # Ako želiš da vidiš i željeni frame u svakom trenutku, odkomentariši:
         # draw_frame_axes_capsules(v, T_d, axis_length=0.06, axis_radius=0.0015)
 
         v.sync()
@@ -824,7 +822,7 @@ plt.show()
 
 
 # ============================================
-# GRAFIK 2: Orijentacija TCP-a (STEPENI)
+# GRAFIK 2: Orijentacija TCP-a (stepeni)
 # ============================================
 plt.figure(figsize=(11, 6))
 
@@ -855,7 +853,7 @@ plt.show()
 
 
 # ============================================
-# GRAFIK 3: Norme grešaka (ODVOJENO)
+# GRAFIK 3: Norme grešaka
 # ============================================
 
 # Poziciona greška
