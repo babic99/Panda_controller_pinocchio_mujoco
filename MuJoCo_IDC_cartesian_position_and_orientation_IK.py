@@ -338,7 +338,7 @@ def draw_trajectory_points(
         viewer_handle.user_scn.ngeom += 1
 
 
-# =========================
+
 # 6) Početna konfiguracija
 # =========================
 q_start_arm = np.array(
